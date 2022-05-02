@@ -1,5 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import counterReducer from '../reducers/counterReducer/counterSlice';
+import { ToDosApi } from '../../api/ToDosApi/instance';
 
-export const rootReducer = combineReducers({ counterReducer });
+export const rootReducer = combineReducers({
+  [ToDosApi.reducerPath]: ToDosApi.reducer,
+});
